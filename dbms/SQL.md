@@ -1,0 +1,6 @@
+- SQL - Structured Query Language
+- Used for RDBMS (Relational DBMS)
+- Helps in performing CRUD operations : Create, Read, Update, Delete
+- Examples of various RDBMS software : MySQL, MS SQL Server, Oracle
+- These RDBMS software use SQL as a query language, to query data from the actual database i.e., perform CRUD operations on the data stored in the database. 
+- 
