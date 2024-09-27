@@ -1,0 +1,86 @@
+# Horizontal Scaling vs Vertical Scaling
+(https://medium.com/@sill/system-design-horizontal-vs-vertical-scaling-8e0f24a2e46f)
+
+![[Pasted image 20240927151128.png]]
+
+## Vertical Scalability
+- Adding more power to an existing machine 
+- Or replacing the existing machine with a more powerful one
+- Advantages:
+	- Low Network Load
+	- Consistent data
+- Disadvantages:
+	- No load balancing
+	- hardware limit
+	- single point of failure(spof)
+	- high query load : data is stored in one machine, and querying it can lead to high traffic
+
+## Horizontal Scalability
+- Adding machines to our pool
+- Instead of one expensive server, there a bunch of cheaper servers
+- More flexible
+- Advantages:
+	- Scales well
+	- resilient to failures
+	- load balancing
+- Disadvantages:
+	- inconsistent data
+	- high load n/w
+
+## Load Balancing
+Here, client requests are distributed across multiple servers, it ensures that no server is overloaded.
+Reliability and high availability are maintained by redirecting the requests only to servers which are available. If there are servers offline, those ones will be removed from the load balancing setup.
+
+### Difference algorithms for load balancing:
+- Round Robin: 
+	- The process has a list of all the servers, and the request is forwarded to each server in turn.
+	- It requires that all the servers are the same(same capacity, same load, same storage) and if not, the workload distribution couldn't be efficient. To overcome this problem, we can use _Weighted Round_ _Robin Load Balance algorithm_ where we assign a weight to each server. Server with higher weight will receive more client requests.
+- Least Connections:
+	- forwards the request to the server that is processing the least number of requests
+	- load balancer needs to find the server which is least busy so it might need to do additional computing which may take a while
+- IP Hash:
+	-  request is sent to the server based on the Client IP. 
+	- IP Hash ensures that requests from a particular client are always directed to the same server, as long as it is available.
+	-  issue we could have is that a server becomes overloaded, so to avoid this, we can set capacity rules for the number of connections on a single server from a single source, or on how many connections from a single source are allowed.
+# Design Patterns
+(https://medium.com/cognitivecraftsman/design-patterns-every-software-engineer-should-know-c4f83c32a7d8)
+
+Design patterns in software engineering are typical solutions to common problems in software design. They represent best practices, evolved over time, and are a toolkit for software developers to solve common problems efficiently.
+
+## Why design patterns matter?
+1. Solving Recurring Problems: They provide solutions to problems that are encountered repeatedly
+2. Facilitating Communication: They facilitate a shared language for developers. When someone mentions a pattern like 'Singleton' or 'Observer', the developers understand immediately. This shared vocabulary helps facilitate communication among team members.
+3. Enhancing Code Reusability and Maintainability: By using established patterns, developers create code that is more modular and easier to maintain. Patterns encourage the principle of ‘Don’t Repeat Yourself’ (DRY), which leads to less redundant code and easier updates and maintenance.
+4. Improving Scalability: They incorporate principles that make it easier to scale apps. 
+5. Facilitating Best Practices: They encapsulate best practices derived from experienced developers and designers. 
+
+## Design Principles
+The four key principles central to design patterns — **encapsulation**, **abstraction**, **inheritance**, and **polymorphism** — are foundational concepts in object-oriented programming (OOP). Each plays a crucial role in creating efficient, reusable, and maintainable software.
+
+1. Encapsulation
+2. Abstraction
+3. Inheritance
+4. Polymorphism
+
+## Categories of Design Patterns
+- Creational Patterns: Simplify object creation. Eg. Singleton Pattern
+- Structural Patterns: Deal w/ object composition. Eg. Adapter Pattern allows incompatible interfaces to work together, used in system integrations.
+- Behavioral Patterns:  Handle communication between objects. Example: Observer Pattern, where an object, called the subject, maintains a list of its dependents, called observers, and notifies them automatically of any state changes.
+
+## Best Design Patterns
+### Strategy Pattern
+### Composite Pattern
+
+
+# Monolithic vs Microservices Architecture
+(https://medium.com/design-microservices-architecture-with-patterns/architecture-comparison-monolithic-vs-microservices-4109265c4806)
+
+## Microservices Interview Questions
+(https://medium.com/@alexa.polly007/microservices-interview-questions-e3aa677c326b)
+
+# Design a Parking Lot
+(https://medium.com/geekculture/system-design-parking-lot-design-interview-question-using-java-3d1dea4f6a2)
+
+
+
+
