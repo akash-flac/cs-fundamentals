@@ -1,0 +1,14 @@
+# Design A Parking Lot
+- https://youtu.be/DSGsa0pu8-k?si=-gxgBTliSRi63Mn3
+- Ambiguity: ask clarifying qstns
+- Systematic Approach: approach the problem in a systematic manner, dont rush in to one soln
+- questions
+	- how is the parking lot designed?
+	- accesibility?
+	- how many spots?
+	- ultiple levels?
+	- multiple entrances? 
+	- concurrency?
+	- dependencies btw levels? : first fill upper level then lower level if multiple levels?
+	- should we optimize to fill certain areas first?
+	- 
