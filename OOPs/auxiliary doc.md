@@ -7,7 +7,7 @@
 
 
 - in case of inheritance, when we have a derived class that is inherited from a base class, and then, we have some properties for the derived class which are not present in the base class, and we have declared parameterized constructors for both, if we don't give in the correct parameters(i.e., we use some properties from the base class and some from the derived for our object), and we have the right parameterized constructor for that in our derived class but for the properties belonging to the base class, they need to be initialized in the base class's constructor, but as there is a parameterized constructor there(doesn't take only those parameters that were used in the object's initialization), there is no default constructor there and so we need to define one, or else error will be thrown.
-	- Derived Class : ![[Pasted image 20241009230858.png]]
-	- Base Class : ![[Pasted image 20241009230925.png]] 
-	- New Base Class(with a default constructor):  ![[Pasted image 20241009231534.png]]
+	- Derived Class : ![](attachments/Pasted%20image%2020241009230858.png)
+	- Base Class : ![](attachments/Pasted%20image%2020241009230925.png) 
+	- New Base Class(with a default constructor):  ![](attachments/Pasted%20image%2020241009231534.png)
 
